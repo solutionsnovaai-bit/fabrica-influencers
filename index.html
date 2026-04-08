@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fábrica de Influencers</title>
+  <title>Fábrica de Influencers™</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -75,7 +75,7 @@
 
       <h1 class="hero__title" id="heroTitle">
         <span class="hero__title-line" data-split>Fábrica de</span>
-        <span class="hero__title-line hero__title-line--accent" data-split>Influencer<sup>™</sup></span>
+        <span class="hero__title-line hero__title-line--accent" data-split>Influencers<sup>™</sup></span>
       </h1>
 
       <p class="hero__sub" id="heroSub">
@@ -372,28 +372,71 @@
 
       <div class="offer__card">
         <div class="offer__card-inner">
-          <ul class="offer__list">
-            <li class="offer__list-item" data-reveal>
-              <svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              120 imagens prontas
-            </li>
-            <li class="offer__list-item" data-reveal>
-              <svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              120 prompts editáveis
-            </li>
-            <li class="offer__list-item" data-reveal>
-              <svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Agente MorphIA™
-            </li>
-            <li class="offer__list-item" data-reveal>
-              <svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Uso ilimitado
-            </li>
-          </ul>
 
-          <div class="offer__price-block">
-            <p class="offer__price-label">Acesso por apenas</p>
-            <p class="offer__price">R$ 29,00</p>
+          <!-- O que você recebe -->
+          <div class="offer__items" data-reveal>
+            <div class="offer__item">
+              <div class="offer__item-left">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span class="offer__item-name">
+                  120 Imagens Prontas
+                  <small>Copie, cole e poste. Comece a lucrar imediatamente.</small>
+                </span>
+              </div>
+              <span class="offer__item-price">R$ 197,00</span>
+            </div>
+
+            <div class="offer__item">
+              <div class="offer__item-left">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span class="offer__item-name">
+                  120 Prompts Editáveis
+                  <small>Geração infinita de influencers com pequenas mudanças.</small>
+                </span>
+              </div>
+              <span class="offer__item-price">R$ 97,00</span>
+            </div>
+
+            <div class="offer__item">
+              <div class="offer__item-left">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span class="offer__item-name">
+                  Agente MorphIA™
+                  <small>Seu funcionário de IA — novas imagens em segundos com 1 linha de comando.</small>
+                </span>
+              </div>
+              <span class="offer__item-price">R$ 197,00</span>
+            </div>
+          </div>
+
+          <!-- Total riscado -->
+          <div class="offer__total-row" data-reveal>
+            <span class="offer__total-label">Valor total</span>
+            <span class="offer__total-value">R$ 491,00</span>
+          </div>
+
+          <!-- Separador -->
+          <div class="offer__divider" data-reveal>
+            <span class="offer__divider-line"></span>
+            <span class="offer__divider-text">Mas hoje, somente hoje</span>
+            <span class="offer__divider-line"></span>
+          </div>
+
+          <!-- Preço real -->
+          <div class="offer__price-block" data-reveal>
+            <span class="offer__price-tag">✦ Acesso completo à Fábrica por apenas</span>
+
+            <div class="offer__price-main">
+              <span class="offer__price-currency">12×</span>
+              <span class="offer__price-value">9,90</span>
+              <span class="offer__price-period">no cartão</span>
+            </div>
+
+            <div class="offer__price-or">ou</div>
+
+            <p class="offer__price-pix">
+              <strong>R$ 97,00</strong> à vista no PIX ou Cartão de Crédito
+            </p>
           </div>
 
           <a href="#" class="btn btn--primary btn--large magnetic" data-magnetic>
@@ -404,6 +447,7 @@
           <p class="offer__urgency">
             ⚠️ Hoje isso ainda é vantagem. Quem chega primeiro, cresce primeiro.
           </p>
+
         </div>
       </div>
     </div>
