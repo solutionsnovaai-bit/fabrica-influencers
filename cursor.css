@@ -1,0 +1,64 @@
+/* ===== CUSTOM CURSOR ===== */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+
+.cursor__inner {
+  width: 8px;
+  height: 8px;
+  background: var(--white);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s var(--ease-out-expo),
+              width 0.4s var(--ease-out-expo),
+              height 0.4s var(--ease-out-expo);
+}
+
+.cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(201, 168, 76, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s var(--ease-out-expo),
+              height 0.5s var(--ease-out-expo),
+              border-color 0.3s ease,
+              opacity 0.3s ease;
+}
+
+/* States */
+body.cursor--hover .cursor__inner {
+  width: 60px;
+  height: 60px;
+  background: var(--gold);
+}
+
+body.cursor--hover .cursor-follower {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+body.cursor--drag .cursor-follower {
+  width: 80px;
+  height: 80px;
+  border-color: var(--gold);
+}
+
+/* Hide on mobile/touch devices */
+@media (hover: none) {
+  .cursor,
+  .cursor-follower {
+    display: none;
+  }
+}

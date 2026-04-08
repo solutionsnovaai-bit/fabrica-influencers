@@ -1,0 +1,170 @@
+/* ===== BASE ===== */
+html, body {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Progress bar */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold-dim), var(--gold), var(--gold-light));
+  z-index: 1000;
+  pointer-events: none;
+  transform-origin: left;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  transition: all var(--duration-fast) var(--ease-out-expo);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gold);
+  border-radius: inherit;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--duration-med) var(--ease-out-expo);
+  z-index: -1;
+}
+
+.btn:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.btn--primary {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.btn--primary::before {
+  background: var(--gold-light);
+}
+
+.btn--primary:hover {
+  color: var(--black);
+}
+
+.btn--nav {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid rgba(245, 240, 232, 0.25);
+  padding: 0.6rem 1.4rem;
+  font-size: 0.75rem;
+}
+
+.btn--nav:hover {
+  background: var(--gold);
+  color: var(--black);
+  border-color: var(--gold);
+}
+
+.btn--large {
+  padding: 1.25rem 2.5rem;
+  font-size: 0.9rem;
+}
+
+.btn__arrow {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  transition: transform var(--duration-fast) var(--ease-out-expo);
+}
+
+.btn:hover .btn__arrow {
+  transform: translateX(4px);
+}
+
+/* Section number */
+.section__num {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+/* Section title */
+.section__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+/* Section body */
+.section__body {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  line-height: 1.7;
+  color: var(--white-dim);
+  margin-bottom: 1rem;
+}
+
+.section__body--accent {
+  color: var(--white);
+}
+
+.section__body--gold {
+  color: var(--gold);
+  font-weight: 500;
+}
+
+/* Section list */
+.section__list {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.section__list-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--white-dim);
+}
+
+.section__list-item span {
+  color: var(--gold);
+}
+
+/* Generic section spacing */
+.section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Reveal animation base */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(30px);
+}

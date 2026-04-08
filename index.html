@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fábrica de Influencers™</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+  <!-- SplitType -->
+  <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/cursor.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/carousel.css" />
+  <link rel="stylesheet" href="css/offer.css" />
+  <link rel="stylesheet" href="css/cta.css" />
+  <link rel="stylesheet" href="css/grain.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor">
+    <div class="cursor__inner"></div>
+  </div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- Grain Overlay -->
+  <canvas class="grain-canvas" id="grainCanvas"></canvas>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">
+      <span class="nav__logo-text">Fábrica<span class="nav__logo-tm">™</span></span>
+    </div>
+    <div class="nav__cta">
+      <a href="#oferta" class="btn btn--nav magnetic" data-magnetic>Quero Acessar</a>
+    </div>
+  </nav>
+
+  <!-- ============================
+       SECTION 1 — HERO FULLSCREEN
+  ============================= -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <img src="images/hero.jpeg" alt="Influencer" class="hero__img" id="heroImg" />
+      <div class="hero__overlay"></div>
+    </div>
+
+    <div class="hero__content">
+      <div class="hero__eyebrow">
+        <span class="hero__line"></span>
+        <span class="hero__label">O Padrão. Revelado.</span>
+      </div>
+
+      <h1 class="hero__title" id="heroTitle">
+        <span class="hero__title-line" data-split>Fábrica de</span>
+        <span class="hero__title-line hero__title-line--accent" data-split>Influencers<sup>™</sup></span>
+      </h1>
+
+      <p class="hero__sub" id="heroSub">
+        120 modelos prontos + MorphIA™<br/>
+        Use para você… ou entregue para quem precisa vender mais.
+      </p>
+
+      <div class="hero__actions">
+        <a href="#oferta" class="btn btn--primary magnetic" data-magnetic>
+          <span>Quero Acessar a Fábrica</span>
+          <svg class="btn__arrow" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero__scroll-hint" id="heroScrollHint">
+      <div class="hero__scroll-line"></div>
+      <span>scroll</span>
+    </div>
+
+    <div class="hero__counter-badge">
+      <span class="hero__counter-num" data-count="120">0</span>
+      <span class="hero__counter-label">influencers<br/>prontas</span>
+    </div>
+  </section>
+
+  <!-- ============================
+       SECTION 2 — DOR (STICKY + IMG6)
+  ============================= -->
+  <section class="section section--sticky-split" id="sectionDor">
+    <div class="sticky-split__left">
+      <div class="sticky-split__img-wrap">
+        <img src="images/img6.jpeg" alt="Influencer Glamour" class="sticky-split__img" />
+        <div class="sticky-split__img-overlay"></div>
+      </div>
+    </div>
+
+    <div class="sticky-split__right">
+      <div class="sticky-split__panel panel--active">
+        <span class="section__num">01</span>
+        <h2 class="section__title" data-split>Você já pensou isso.</h2>
+        <p class="section__body">"Como essas pessoas conseguem postar todo dia… e sempre parece bom?"</p>
+        <p class="section__body">"Por que quando eu tento… nunca fica igual?"</p>
+        <p class="section__body section__body--accent">"Será que precisa gastar dinheiro… ou aprender tudo isso de IA?"</p>
+      </div>
+
+      <div class="sticky-split__panel">
+        <span class="section__num">02</span>
+        <h2 class="section__title" data-split>E o pior:</h2>
+        <p class="section__body">Você trava. Você adia.</p>
+        <p class="section__body">E continua sem postar.</p>
+        <p class="section__body section__body--accent">Enquanto isso… outras pessoas estão crescendo e lucrando com algo que parece simples.</p>
+      </div>
+
+      <div class="sticky-split__panel">
+        <span class="section__num">03</span>
+        <h2 class="section__title" data-split>A verdade é essa:</h2>
+        <p class="section__body">Você não está falhando.</p>
+        <p class="section__body section__body--accent">Você só está tentando fazer do jeito mais difícil.</p>
+        <div class="section__list">
+          <div class="section__list-item"><span>→</span> Quem cresce não cria do zero</div>
+          <div class="section__list-item"><span>→</span> Não inventa</div>
+          <div class="section__list-item"><span>→</span> Não complica</div>
+        </div>
+        <p class="section__body section__body--gold">Eles usam modelos que já funcionam.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       SECTION 3 — CAROUSEL (imgs 3,2,7,4,9)
+  ============================= -->
+  <section class="section section--carousel" id="sectionCarousel">
+    <div class="carousel-header">
+      <span class="section__num">04</span>
+      <h2 class="carousel-header__title" data-split>120 influencers.<br/>Infinitas possibilidades.</h2>
+      <p class="carousel-header__sub">Copie, adapte ou multiplique com o MorphIA™</p>
+    </div>
+
+    <div class="carousel-track-wrap" id="carouselWrap">
+      <div class="carousel-track" id="carouselTrack">
+
+        <div class="carousel-card" data-index="0">
+          <div class="carousel-card__img-wrap">
+            <img src="images/img3.jpeg" alt="Influencer 1" class="carousel-card__img" loading="lazy" />
+          </div>
+          <div class="carousel-card__info">
+            <span class="carousel-card__tag">Lifestyle</span>
+            <p class="carousel-card__label">Editorial & Atitude</p>
+          </div>
+        </div>
+
+        <div class="carousel-card" data-index="1">
+          <div class="carousel-card__img-wrap">
+            <img src="images/img2.jpeg" alt="Influencer 2" class="carousel-card__img" loading="lazy" />
+          </div>
+          <div class="carousel-card__info">
+            <span class="carousel-card__tag">Beleza</span>
+            <p class="carousel-card__label">Natural & Autêntica</p>
+          </div>
+        </div>
+
+        <div class="carousel-card" data-index="2">
+          <div class="carousel-card__img-wrap">
+            <img src="images/img7.jpeg" alt="Influencer 3" class="carousel-card__img" loading="lazy" />
+          </div>
+          <div class="carousel-card__info">
+            <span class="carousel-card__tag">Editorial</span>
+            <p class="carousel-card__label">Elegância Fria</p>
+          </div>
+        </div>
+
+        <div class="carousel-card" data-index="3">
+          <div class="carousel-card__img-wrap">
+            <img src="images/img4.jpeg" alt="Influencer 4" class="carousel-card__img" loading="lazy" />
+          </div>
+          <div class="carousel-card__info">
+            <span class="carousel-card__tag">Fitness</span>
+            <p class="carousel-card__label">Athleisure Real</p>
+          </div>
+        </div>
+
+        <div class="carousel-card" data-index="4">
+          <div class="carousel-card__img-wrap">
+            <img src="images/img9.jpeg" alt="Influencer 5" class="carousel-card__img" loading="lazy" />
+          </div>
+          <div class="carousel-card__info">
+            <span class="carousel-card__tag">Luxo</span>
+            <p class="carousel-card__label">Glamour Urbano</p>
+          </div>
+        </div>
+
+        <!-- Duplicates for infinite loop feel -->
+        <div class="carousel-card" data-index="5">
+          <div class="carousel-card__img-wrap">
+            <img src="images/img3.jpeg" alt="Influencer 1" class="carousel-card__img" loading="lazy" />
+          </div>
+          <div class="carousel-card__info">
+            <span class="carousel-card__tag">Lifestyle</span>
+            <p class="carousel-card__label">Editorial & Atitude</p>
+          </div>
+        </div>
+
+        <div class="carousel-card" data-index="6">
+          <div class="carousel-card__img-wrap">
+            <img src="images/img6.jpeg" alt="Influencer 6" class="carousel-card__img" loading="lazy" />
+          </div>
+          <div class="carousel-card__info">
+            <span class="carousel-card__tag">Night</span>
+            <p class="carousel-card__label">Dark & Premium</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="carousel-drag-hint">
+      <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M8 12h8M12 8l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <span>arraste para explorar</span>
+    </div>
+  </section>
+
+  <!-- ============================
+       SECTION 4 — EDITORIAL SPLIT (img8)
+  ============================= -->
+  <section class="section section--editorial" id="sectionEditorial">
+    <div class="editorial__img-wrap">
+      <img src="images/img8.jpeg" alt="Influencer Editorial" class="editorial__img" />
+      <div class="editorial__img-caption">
+        <span>Modelo #047 — Pronto para usar</span>
+      </div>
+    </div>
+
+    <div class="editorial__content">
+      <span class="section__num">05</span>
+      <h2 class="editorial__title" data-split>Dentro da<br/>Fábrica.</h2>
+
+      <div class="editorial__items">
+        <div class="editorial__item" data-reveal>
+          <div class="editorial__item-icon">
+            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1"/><path d="M13 20h14M20 13l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <h3 class="editorial__item-title">120 Influencers Prontas</h3>
+            <p class="editorial__item-desc">Copie, cole e poste. Comece a vender e lucrar imediatamente.</p>
+          </div>
+        </div>
+
+        <div class="editorial__item" data-reveal>
+          <div class="editorial__item-icon">
+            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1"/><rect x="13" y="13" width="6" height="6" stroke="currentColor" stroke-width="1.5"/><rect x="21" y="21" width="6" height="6" stroke="currentColor" stroke-width="1.5"/><path d="M19 16h6M21 22V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <h3 class="editorial__item-title">120 Prompts Editáveis</h3>
+            <p class="editorial__item-desc">Gere novas versões com pequenas mudanças. Conteúdo infinito.</p>
+          </div>
+        </div>
+
+        <div class="editorial__item" data-reveal>
+          <div class="editorial__item-icon">
+            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1"/><path d="M14 26c0-3.314 2.686-6 6-6s6 2.686 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="20" cy="16" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <div>
+            <h3 class="editorial__item-title">MorphIA™</h3>
+            <p class="editorial__item-desc">Seu funcionário de IA. Crie novas influencers com apenas 1 linha de comando.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       SECTION 5 — MARQUEE TEXT
+  ============================= -->
+  <section class="section section--marquee">
+    <div class="marquee-wrap">
+      <div class="marquee-track" id="marqueeTrack">
+        <span>Copiar</span><span class="marquee-dot">✦</span>
+        <span>Adaptar</span><span class="marquee-dot">✦</span>
+        <span>Lucrar</span><span class="marquee-dot">✦</span>
+        <span>MorphIA™</span><span class="marquee-dot">✦</span>
+        <span>120 Modelos</span><span class="marquee-dot">✦</span>
+        <span>Copiar</span><span class="marquee-dot">✦</span>
+        <span>Adaptar</span><span class="marquee-dot">✦</span>
+        <span>Lucrar</span><span class="marquee-dot">✦</span>
+        <span>MorphIA™</span><span class="marquee-dot">✦</span>
+        <span>120 Modelos</span><span class="marquee-dot">✦</span>
+        <span>Copiar</span><span class="marquee-dot">✦</span>
+        <span>Adaptar</span><span class="marquee-dot">✦</span>
+        <span>Lucrar</span><span class="marquee-dot">✦</span>
+        <span>MorphIA™</span><span class="marquee-dot">✦</span>
+        <span>120 Modelos</span><span class="marquee-dot">✦</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       SECTION 6 — MECANISMO (img5)
+  ============================= -->
+  <section class="section section--mechanism" id="sectionMechanism">
+    <div class="mechanism__content">
+      <span class="section__num">06</span>
+      <h2 class="mechanism__title" data-split>O atalho real.</h2>
+      <div class="mechanism__steps">
+        <div class="mechanism__step" data-reveal>
+          <span class="mechanism__step-num">01</span>
+          <div class="mechanism__step-body">
+            <h4>1 imagem</h4>
+            <p>vira várias versões</p>
+          </div>
+          <div class="mechanism__step-arrow">→</div>
+        </div>
+        <div class="mechanism__step" data-reveal>
+          <span class="mechanism__step-num">02</span>
+          <div class="mechanism__step-body">
+            <h4>1 ideia</h4>
+            <p>vira conteúdo infinito</p>
+          </div>
+          <div class="mechanism__step-arrow">→</div>
+        </div>
+        <div class="mechanism__step" data-reveal>
+          <span class="mechanism__step-num">03</span>
+          <div class="mechanism__step-body">
+            <h4>Você para de travar</h4>
+            <p>e começa a lucrar</p>
+          </div>
+        </div>
+      </div>
+      <p class="mechanism__conclusion">Você não depende mais de criatividade.<br/>Você depende de <strong>estrutura pronta + IA.</strong></p>
+    </div>
+
+    <div class="mechanism__visual">
+      <div class="mechanism__img-stack">
+        <img src="images/img5.jpeg" alt="Influencer" class="mechanism__img mechanism__img--back" />
+        <img src="images/img7.jpeg" alt="Influencer" class="mechanism__img mechanism__img--mid" />
+        <img src="images/img2.jpeg" alt="Influencer" class="mechanism__img mechanism__img--front" />
+        <div class="mechanism__badge">
+          <span class="mechanism__badge-num" data-count="120">0</span>
+          <span class="mechanism__badge-label">modelos</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       SECTION 7 — OFERTA / PREÇO
+  ============================= -->
+  <section class="section section--offer" id="oferta">
+    <div class="offer__bg-text" aria-hidden="true">FÁBRICA</div>
+
+    <div class="offer__content">
+      <span class="section__num">07</span>
+      <h2 class="offer__title" data-split>Acesso Completo<br/>à Fábrica.</h2>
+
+      <div class="offer__card">
+        <div class="offer__card-inner">
+          <ul class="offer__list">
+            <li class="offer__list-item" data-reveal>
+              <svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              120 imagens prontas
+            </li>
+            <li class="offer__list-item" data-reveal>
+              <svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              120 prompts editáveis
+            </li>
+            <li class="offer__list-item" data-reveal>
+              <svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Agente MorphIA™
+            </li>
+            <li class="offer__list-item" data-reveal>
+              <svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Uso ilimitado
+            </li>
+          </ul>
+
+          <div class="offer__price-block">
+            <p class="offer__price-label">Acesso por apenas</p>
+            <p class="offer__price">[INSERIR PREÇO]</p>
+          </div>
+
+          <a href="#" class="btn btn--primary btn--large magnetic" data-magnetic>
+            <span>Quero Minha Fábrica Agora</span>
+            <svg class="btn__arrow" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+
+          <p class="offer__urgency">
+            ⚠️ Hoje isso ainda é vantagem. Quem chega primeiro, cresce primeiro.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       SECTION 8 — FECHAMENTO FINAL
+  ============================= -->
+  <section class="section section--closing" id="sectionClosing">
+    <div class="closing__visual">
+      <img src="images/img8.jpeg" alt="Influencer" class="closing__img closing__img--1" />
+      <img src="images/img6.jpeg" alt="Influencer" class="closing__img closing__img--2" />
+      <img src="images/img3.jpeg" alt="Influencer" class="closing__img closing__img--3" />
+    </div>
+
+    <div class="closing__content">
+      <h2 class="closing__title" data-split>Pequenos negócios<br/>precisam disso<br/>todos os dias.</h2>
+      <p class="closing__sub">E agora você pode simplesmente copiar, adaptar e entregar.</p>
+
+      <div class="closing__actions">
+        <a href="#oferta" class="btn btn--primary btn--large magnetic" data-magnetic>
+          <span>Quero Entrar na Fábrica Agora</span>
+          <svg class="btn__arrow" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer__copy">Fábrica de Influencers™ · Todos os direitos reservados</p>
+    <p class="footer__dev">Desenvolvido por <strong>Nova IA Solutions</strong></p>
+  </footer>
+
+  <!-- JS Modules -->
+  <script type="module" src="js/main.js"></script>
+
+</body>
+</html>
